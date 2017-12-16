@@ -1,0 +1,13 @@
+C:\Users\gary\Documents\Visual Studio 2015\Projects\mp3scraper\mp3scraper\bin\Release\mp3scraper.exe.config
+C:\Users\gary\Documents\Visual Studio 2015\Projects\mp3scraper\mp3scraper\bin\Release\gpl.txt
+C:\Users\gary\Documents\Visual Studio 2015\Projects\mp3scraper\mp3scraper\bin\Release\license.txt
+C:\Users\gary\Documents\Visual Studio 2015\Projects\mp3scraper\mp3scraper\bin\Release\mp3scraper-readme-2016-6-15-0.txt
+C:\Users\gary\Documents\Visual Studio 2015\Projects\mp3scraper\mp3scraper\bin\Release\test-files\mp3scraper-test-filtered.html
+C:\Users\gary\Documents\Visual Studio 2015\Projects\mp3scraper\mp3scraper\bin\Release\test-files\mp3scraper-test-relative.html
+C:\Users\gary\Documents\Visual Studio 2015\Projects\mp3scraper\mp3scraper\bin\Release\test-files\mp3scraper-test-typical.html
+C:\Users\gary\Documents\Visual Studio 2015\Projects\mp3scraper\mp3scraper\bin\Release\mp3scraper.docx
+C:\Users\gary\Documents\Visual Studio 2015\Projects\mp3scraper\mp3scraper\bin\Release\mp3scraper.pdf
+C:\Users\gary\Documents\Visual Studio 2015\Projects\mp3scraper\mp3scraper\bin\Release\mp3scraper.exe
+C:\Users\gary\Documents\Visual Studio 2015\Projects\mp3scraper\mp3scraper\bin\Release\mp3scraper.pdb
+C:\Users\gary\Documents\Visual Studio 2015\Projects\mp3scraper\mp3scraper\obj\Release\mp3scraper.exe
+C:\Users\gary\Documents\Visual Studio 2015\Projects\mp3scraper\mp3scraper\obj\Release\mp3scraper.pdb
