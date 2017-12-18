@@ -34,7 +34,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="mp3scrApi, Version=2017.11.22.1, Culture=neutral, processorArchitecture=MSIL">
+    <Reference Include="mp3scrApi, Version=2017.12.16.1, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\..\mp3scrApi\mp3scrApi\bin\Debug\mp3scrApi.dll</HintPath>
     </Reference>

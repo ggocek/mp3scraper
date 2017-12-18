@@ -2,6 +2,10 @@
 All rights reserved.
 Scrape web pages for MP3 links and generate RSS files.
 
+2017-12-17
+wraparound attribute changed to scrape the most recent link if newer than
+30 days old, so that unexpected new episodes override the wraparound.
+
 2017-11-12
 Resolved an issue with exception: "Could not create SSL/TLS secure channel"
 Exception handling adjustments.
