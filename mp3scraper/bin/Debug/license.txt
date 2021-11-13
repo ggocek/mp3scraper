@@ -1,7 +1,7 @@
 ﻿mp3scsraper - a program that finds MP3 links on a remote web page and generates a
 podcatcher-compatible RSS file pointing to those MP3 files.
 
-Copyright © 2016, Gary Gocek, www.gocek.org
+Copyright © 2021 Gary Gocek, www.gocek.org
 This is open-source software, free to use for any purpose, as long as
 it (and any derivatives) remain free and open source. See the GPL
 described below for details.

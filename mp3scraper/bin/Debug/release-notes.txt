@@ -2,6 +2,18 @@
 All rights reserved.
 Scrape web pages for MP3 links and generate RSS files.
 
+2021-11-13
+Added maxWebRequests attribute to limit the number of web requests against a
+single host. This limits the number of valid MP3s linked in the RSS results.
+This is used to simply limit the size of the RSS and the number of MP3 web
+requests, and helps when the host limits the number of web requests per unit
+unit of time.
+
+2020-07-15
+Added UserAgent to the web request.
+Added some text to the console message when a web file's info can't be retrieved,
+but it's usually just "server error" or something like that anyway.
+
 2017-12-17
 wraparound attribute changed to scrape the most recent link if newer than
 30 days old, so that unexpected new episodes override the wraparound.
