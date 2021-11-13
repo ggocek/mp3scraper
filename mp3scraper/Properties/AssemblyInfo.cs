@@ -10,7 +10,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("Gary Gocek, http://gary.gocek.org, gary@gocek.org")]
 [assembly: AssemblyProduct("mp3scraper")]
-[assembly: AssemblyCopyright("Copyright ©  2017")]
+[assembly: AssemblyCopyright("Copyright ©  2021")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -32,5 +32,5 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("2017.12.22.1")]
-[assembly: AssemblyFileVersion("2017.12.22.1")]
+[assembly: AssemblyVersion("2021.11.13.1")]
+[assembly: AssemblyFileVersion("2021.11.13.1")]
