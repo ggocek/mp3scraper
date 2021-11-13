@@ -72,7 +72,7 @@
     <Content Include="license.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="mp3scraper-readme-2017-10-21-0.txt">
+    <Content Include="mp3scraper-readme-2021-11-13-0.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
     <Content Include="release-notes.txt">

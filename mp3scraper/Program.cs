@@ -44,7 +44,7 @@ namespace mp3scraper
             try
             {
                 // The ServicePoint class provides connection management for HTTP connections.
-                // This resolve occasional issues with some SSL sites
+                // This resolves occasional issues with some SSL sites
                 // https://stackoverflow.com/questions/2859790/the-request-was-aborted-could-not-create-ssl-tls-secure-channel
                 ServicePointManager.Expect100Continue = true;
                 ServicePointManager.DefaultConnectionLimit = 9999;
@@ -148,6 +148,9 @@ namespace mp3scraper
                     // The config file specifies whether a formula should be used to wrap around to the beginning of a non-changing source feed
                     o = ConfigurationManager.AppSettings["wraparound" + iii.ToString("d4")];
                     mp3scr.WraparoundFromObj(o);
+                    // Max items to test remotely and place in RSS
+                    o = ConfigurationManager.AppSettings["maxWebRequests" + iii.ToString("d4")];
+                    mp3scr.MaxWebRequestsFromObj(o);
 
                     // Get any existing RSS file, for merging with the latest MP3s and checking the refresh date.
                     Console.WriteLine(iii.ToString("d4"));
@@ -182,14 +185,25 @@ namespace mp3scraper
                             {
                                 // The current datetime is NOT refreshDays after the datetime of the most recent
                                 // existing feed item. It's too soon to refresh the feed.
-                                Console.WriteLine("Not yet time to refresh " + mp3scr.ChannelTitle + ": " + mp3scr.Url);
+                                Console.WriteLine("Next refresh " + latestItemLastModDt.Add(new TimeSpan(mp3scr.RefreshDays, 0, 0, 0)).ToString() + ", skipping " + mp3scr.ChannelTitle + " (" + mp3scr.Url + ")");
                                 continue;
                             }
+                            else
+                            {
+                                Console.WriteLine("Latest item " + latestItemLastModDt.ToString() + ", scraping " + mp3scr.ChannelTitle + " (" + mp3scr.Url + ")");
+                            }
                         }
+                        else
+                        {
+                            Console.WriteLine("RefreshDays ignored, no previous items, scraping " + mp3scr.ChannelTitle + " (" + mp3scr.Url + ")");
+                        }
+                    }
+                    else
+                    {
+                        Console.WriteLine("RefreshDays " + mp3scr.RefreshDays.ToString() + ", TestIndex '" + testIndexVal.ToString() + "', scraping " + mp3scr.ChannelTitle + " (" + mp3scr.Url + ")");
                     }
 
                     // Get the full markup of the web page
-                    Console.WriteLine("Scraping " + mp3scr.Url);
                     string curMarkup = string.Empty;
                     try
                     {
@@ -238,6 +252,7 @@ namespace mp3scraper
                     List<SyndicationItem> itemsToKeep = new List<SyndicationItem>();
                     // RSS items created from scraped MP3 links
                     List<SyndicationItem> itemsToAdd = new List<SyndicationItem>();
+                    int webRequestCnt = 0;
 
                     // In general, the scraped MP3 links are used to create new RSS items with new
                     // sizes and mod dates. Theoretically, an MP3 link could be saved in an RSS file
@@ -247,10 +262,15 @@ namespace mp3scraper
                     // The host removed the MP3 link for a reason, so this could be considered discourteous.
                     // The links are tested for existence.
                     // If RetainOrphans is false, the RSS items are not retained and the links will be lost.
+                    // The number of RSS links could be the maximum, i.e., MaxWebRequests. If RetainOrphans
+                    // is true, the item check will count towards the maximum and there won't be any room
+                    // left for new items. So, if RetainOrphans is true then MaxWebRequests should be 0 and
+                    // you'll need to hope the host does not throttle the number of web requests.
                     if ((sf != null) && mp3scr.RetainOrphans)
                     {
                         foreach (SyndicationItem si in sf.Items)
                         {
+                            string myErrorMsg = string.Empty;
                             // Get the MP3 link.
                             // There are usually two link objects, one for the item's parent feed, and one for the MP3 file.
                             // If there are multiple MP3 links in one item, this will not work right.
@@ -260,19 +280,41 @@ namespace mp3scraper
                             // If the RSS item's MP3 link is not in the list of scraped links, create an RSS item.
                             // The file will either be found with its current size and mod date,
                             // or the file will no longer exist and the RSS item will not be created.
-                            if (!noDupsCurAddrs.Contains(mpSl.Uri.AbsoluteUri, StringComparer.InvariantCultureIgnoreCase))
+                            if (!noDupsCurAddrs.Contains(mpSl.Uri.AbsoluteUri, StringComparer.InvariantCultureIgnoreCase) &&
+                                ((webRequestCnt < mp3scr.MaxWebRequests) || (mp3scr.MaxWebRequests <= 0)))
                             {
-                                Console.WriteLine("RSS item: " + mpSl.Uri.AbsoluteUri);
-                                SyndicationItem newSi =
-                                    mp3scr.ItemForMp3(mpSl.Uri.AbsoluteUri, mp3scr.ChannelTitle, mp3scr.GuidPrefix, mp3scr.Url, mp3scr.AllowHttps);
-                                if (newSi != null)
+                                webRequestCnt++;
+                                Console.WriteLine("RSS item " + webRequestCnt.ToString() + ": " + mpSl.Uri.AbsoluteUri);
+                                try
                                 {
-                                    itemsToKeep.Add(newSi);
+                                    SyndicationItem newSi =
+                                        mp3scr.ItemForMp3(mpSl.Uri.AbsoluteUri, mp3scr.ChannelTitle, mp3scr.GuidPrefix, mp3scr.Url, mp3scr.AllowHttps);
+                                    if (newSi != null)
+                                    {
+                                        itemsToKeep.Add(newSi);
+                                    }
+                                    else
+                                    {
+                                        Console.WriteLine("While retaining orphans, ItemForMp3 returned null for " + mpSl.Uri.AbsoluteUri);
+                                    }
                                 }
-                                else
+                                catch (WebException webEx)
                                 {
-                                    Console.WriteLine("While retaining orphans, ItemForMp3 returned null for " + mpSl.Uri.AbsoluteUri);
+                                    Console.WriteLine("While retaining orphans, ItemForMp3 returned message for " + mpSl.Uri.AbsoluteUri +
+                                        " | " + webEx.Message + " | " + (webEx.InnerException != null ? webEx.InnerException.Message : ""));
                                 }
+                                catch (Exception ex)
+                                {
+                                    Console.WriteLine("While retaining orphans, ItemForMp3 returned message for " + mpSl.Uri.AbsoluteUri +
+                                        " | " + ex.Message + " | " + (ex.InnerException != null ? ex.InnerException.Message : ""));
+                                }
+                            }
+                            else if (!noDupsCurAddrs.Contains(mpSl.Uri.AbsoluteUri, StringComparer.InvariantCultureIgnoreCase) &&
+                                (webRequestCnt >= mp3scr.MaxWebRequests) && (mp3scr.MaxWebRequests > 0))
+                            {
+                                Console.WriteLine("RSS item " + webRequestCnt.ToString() + " not added because it would exceed MaxWebRequests (" +
+                                    mp3scr.MaxWebRequests.ToString() + "): " + mpSl.Uri.AbsoluteUri);
+                                webRequestCnt++;
                             }
                         }
                     }
@@ -282,15 +324,36 @@ namespace mp3scraper
                     // Previously generated RSS link items are discarded and recreated.
                     foreach (string mp3Addr in noDupsCurAddrs)
                     {
-                        Console.WriteLine("RSS item: " + mp3Addr);
-                        SyndicationItem newSi = mp3scr.ItemForMp3(mp3Addr, mp3scr.ChannelTitle, mp3scr.GuidPrefix, mp3scr.Url, mp3scr.AllowHttps);
-                        if (newSi != null)
+                        webRequestCnt++;
+                        if ((webRequestCnt > mp3scr.MaxWebRequests) && (mp3scr.MaxWebRequests > 0))
                         {
-                            itemsToAdd.Add(newSi);
+                            Console.WriteLine("RSS item " + webRequestCnt.ToString() + " not added because it would exceed MaxWebRequests (" +
+                                mp3scr.MaxWebRequests.ToString() + "): " + mp3Addr);
+                            continue;
                         }
-                        else
+                        // The count so far is within the max or the mex is unlimited.
+                        Console.WriteLine("RSS item " + webRequestCnt.ToString() + ": " + mp3Addr);
+                        try
                         {
-                            Console.WriteLine("While creating RSS items, ItemForMp3 returned null for " + mp3Addr);
+                            SyndicationItem newSi = mp3scr.ItemForMp3(mp3Addr, mp3scr.ChannelTitle, mp3scr.GuidPrefix, mp3scr.Url, mp3scr.AllowHttps);
+                            if (newSi != null)
+                            {
+                                itemsToAdd.Add(newSi);
+                            }
+                            else
+                            {
+                                Console.WriteLine("While creating RSS items, ItemForMp3 returned null for " + mp3Addr);
+                            }
+                        }
+                        catch (WebException webEx)
+                        {
+                            Console.WriteLine("While creating RSS items, ItemForMp3 returned message for " + mp3Addr +
+                                " | " + webEx.Message + " | " + (webEx.InnerException != null ? webEx.InnerException.Message : ""));
+                        }
+                        catch (Exception ex)
+                        {
+                            Console.WriteLine("While creating RSS items, ItemForMp3 returned message for " + mp3Addr +
+                                " | " + ex.Message + " | " + (ex.InnerException != null ? ex.InnerException.Message : ""));
                         }
                     }
 
