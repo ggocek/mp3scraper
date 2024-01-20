@@ -1,0 +1,60 @@
+﻿mp3scraper, copyright (c) 2024, Gary Gocek
+All rights reserved.
+Scrape web pages for MP3 links and generate RSS files.
+
+2024-01-20
+Minor text updates to documentation and licensing files.
+
+2023-09-19
+Added maintenanceA, maintenanceB and maintenanceC attributes to the sample
+config file. These are ignored at run time, but could be maintained if you
+use a config file maintenance program like mp3scrUI. XML comments <!-- -->
+can also be used in your config files, but mp3ScrUI does not retain them.
+The attributes are included in mp3scraper for completeness of the platform.
+
+2022-05-06
+Visual Studio 2022 and .NET 4.8.
+
+2021-11-13
+Added maxWebRequests attribute to limit the number of web requests against a
+single host. This limits the number of valid MP3s linked in the RSS results.
+This is used to simply limit the size of the RSS and the number of MP3 web
+requests, and helps when the host limits the number of web requests per unit
+unit of time.
+
+2020-07-15
+Added UserAgent to the web request.
+Added some text to the console message when a web file's info can't be retrieved,
+but it's usually just "server error" or something like that anyway.
+
+2017-12-17
+wraparound attribute changed to scrape the most recent link if newer than
+30 days old, so that unexpected new episodes override the wraparound.
+
+2017-11-12
+Resolved an issue with exception: "Could not create SSL/TLS secure channel"
+Exception handling adjustments.
+Upgraded application to .NET 4.6.2.
+
+2017-10-21
+Added wraparound attribute to allow cycling through items of a defunct feed or
+simple directory of MP3 files.
+
+2017-10-14
+Force all HTTPS enclosure links to be HTTP since the W3C RSS validator reports
+HTTPS links as failures. Added allowHttps attribute to determine whether or
+not to force https links to be http.
+
+2017-02-26
+Added urlPrefix attribute to handle URLs in markup other than src=
+
+2016-10-09
+Added logging for disabled feeds.
+Added the channel title to certain log messages.
+
+2016-09-15
+Fixed a bug that caused the application to crash when reading a previous RSS
+file containing no RSS items.
+
+2016-06-15
+First release.
