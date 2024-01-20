@@ -1,6 +1,19 @@
-﻿mp3scraper, copyright (c) 2017, Gary Gocek
+﻿mp3scraper, copyright (c) 2024, Gary Gocek
 All rights reserved.
 Scrape web pages for MP3 links and generate RSS files.
+
+2024-01-20
+Minor text updates to documentation and licensing files.
+
+2023-09-19
+Added maintenanceA, maintenanceB and maintenanceC attributes to the sample
+config file. These are ignored at run time, but could be maintained if you
+use a config file maintenance program like mp3scrUI. XML comments <!-- -->
+can also be used in your config files, but mp3ScrUI does not retain them.
+The attributes are included in mp3scraper for completeness of the platform.
+
+2022-05-06
+Visual Studio 2022 and .NET 4.8.
 
 2021-11-13
 Added maxWebRequests attribute to limit the number of web requests against a
