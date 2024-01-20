@@ -11,3 +11,21 @@ C:\Users\gary\Documents\Visual Studio 2015\Projects\mp3scraper\mp3scraper\bin\Re
 C:\Users\gary\Documents\Visual Studio 2015\Projects\mp3scraper\mp3scraper\bin\Release\mp3scraper.pdb
 C:\Users\gary\Documents\Visual Studio 2015\Projects\mp3scraper\mp3scraper\obj\Release\mp3scraper.exe
 C:\Users\gary\Documents\Visual Studio 2015\Projects\mp3scraper\mp3scraper\obj\Release\mp3scraper.pdb
+C:\Users\gary\source\repos\mp3scraper\mp3scraper\bin\Release\license.txt
+C:\Users\gary\source\repos\mp3scraper\mp3scraper\bin\Release\mp3scraper-readme-2024-01-20-0.txt
+C:\Users\gary\source\repos\mp3scraper\mp3scraper\bin\Release\release-notes.txt
+C:\Users\gary\source\repos\mp3scraper\mp3scraper\bin\Release\test-files\mp3scraper-test-filtered.html
+C:\Users\gary\source\repos\mp3scraper\mp3scraper\bin\Release\test-files\mp3scraper-test-relative.html
+C:\Users\gary\source\repos\mp3scraper\mp3scraper\bin\Release\test-files\mp3scraper-test-typical.html
+C:\Users\gary\source\repos\mp3scraper\mp3scraper\bin\Release\mp3scraper.docx
+C:\Users\gary\source\repos\mp3scraper\mp3scraper\bin\Release\mp3scraper.pdf
+C:\Users\gary\source\repos\mp3scraper\mp3scraper\bin\Release\mp3scraper.exe.config
+C:\Users\gary\source\repos\mp3scraper\mp3scraper\bin\Release\mp3scraper.exe
+C:\Users\gary\source\repos\mp3scraper\mp3scraper\bin\Release\mp3scraper.pdb
+C:\Users\gary\source\repos\mp3scraper\mp3scraper\bin\Release\mp3scrApi.dll
+C:\Users\gary\source\repos\mp3scraper\mp3scraper\bin\Release\mp3scrApi.pdb
+C:\Users\gary\source\repos\mp3scraper\mp3scraper\obj\Release\mp3scraper.csproj.AssemblyReference.cache
+C:\Users\gary\source\repos\mp3scraper\mp3scraper\obj\Release\mp3scraper.csproj.CoreCompileInputs.cache
+C:\Users\gary\source\repos\mp3scraper\mp3scraper\obj\Release\mp3scraper.csproj.CopyComplete
+C:\Users\gary\source\repos\mp3scraper\mp3scraper\obj\Release\mp3scraper.exe
+C:\Users\gary\source\repos\mp3scraper\mp3scraper\obj\Release\mp3scraper.pdb
