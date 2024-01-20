@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("mp3scraper")]
 [assembly: AssemblyDescription("Scrape a web page for MP3 links and generate an RSS (podcast feed) file")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Gary Gocek, http://gary.gocek.org, gary@gocek.org")]
+[assembly: AssemblyCompany("Gary Gocek, https://gary.gocek.org, gary@gocek.org")]
 [assembly: AssemblyProduct("mp3scraper")]
-[assembly: AssemblyCopyright("Copyright ©  2021")]
+[assembly: AssemblyCopyright("Copyright © 2023")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -32,5 +32,5 @@ using System.Runtime.InteropServices;
 // You can specify all the values or you can default the Build and Revision Numbers 
 // by using the '*' as shown below:
 // [assembly: AssemblyVersion("1.0.*")]
-[assembly: AssemblyVersion("2021.11.13.1")]
-[assembly: AssemblyFileVersion("2021.11.13.1")]
+[assembly: AssemblyVersion("2023.09.19.0")]
+[assembly: AssemblyFileVersion("2023.09.19.0")]
