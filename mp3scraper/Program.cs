@@ -1,4 +1,4 @@
-﻿// Copyright © 2017, Gary Gocek, www.gocek.org
+﻿// Copyright © 2023, Gary Gocek, www.gocek.org
 // See app.config for usage instructions.
 using System;
 using System.Collections.Generic;
@@ -48,7 +48,7 @@ namespace mp3scraper
                 // https://stackoverflow.com/questions/2859790/the-request-was-aborted-could-not-create-ssl-tls-secure-channel
                 ServicePointManager.Expect100Continue = true;
                 ServicePointManager.DefaultConnectionLimit = 9999;
-                ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls12 | SecurityProtocolType.Ssl3;
+                ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls | SecurityProtocolType.Tls11 | SecurityProtocolType.Tls12 | SecurityProtocolType.Ssl3 | SecurityProtocolType.Tls13;
             }
             catch (Exception ex)
             {
