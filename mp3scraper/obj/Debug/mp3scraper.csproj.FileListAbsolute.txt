@@ -11,7 +11,45 @@ C:\Users\gary\Documents\Visual Studio 2015\Projects\mp3scraper\mp3scraper\bin\De
 C:\Users\gary\Documents\Visual Studio 2015\Projects\mp3scraper\mp3scraper\bin\Debug\mp3scraper.docx
 C:\Users\gary\Documents\Visual Studio 2015\Projects\mp3scraper\mp3scraper\bin\Debug\mp3scraper.pdf
 C:\Users\gary\Documents\Visual Studio 2015\Projects\mp3scraper\mp3scraper\bin\Debug\release-notes.txt
-C:\Users\gary\Documents\Visual Studio 2015\Projects\mp3scraper\mp3scraper\bin\Debug\mp3scraper-readme-2017-10-21-0.txt
 C:\Users\gary\Documents\Visual Studio 2015\Projects\mp3scraper\mp3scraper\obj\Debug\mp3scraper.csprojResolveAssemblyReference.cache
 C:\Users\gary\Documents\Visual Studio 2015\Projects\mp3scraper\mp3scraper\bin\Debug\mp3scrApi.dll
 C:\Users\gary\Documents\Visual Studio 2015\Projects\mp3scraper\mp3scraper\bin\Debug\mp3scrApi.pdb
+C:\Users\gary\Documents\Visual Studio 2015\Projects\mp3scraper\mp3scraper\bin\Debug\mp3scraper-readme-2021-11-13-0.txt
+C:\Users\gary\Documents\Visual Studio 2022\Projects\mp3scraper\mp3scraper\bin\Debug\gpl.txt
+C:\Users\gary\Documents\Visual Studio 2022\Projects\mp3scraper\mp3scraper\bin\Debug\license.txt
+C:\Users\gary\Documents\Visual Studio 2022\Projects\mp3scraper\mp3scraper\bin\Debug\release-notes.txt
+C:\Users\gary\Documents\Visual Studio 2022\Projects\mp3scraper\mp3scraper\bin\Debug\test-files\mp3scraper-test-filtered.html
+C:\Users\gary\Documents\Visual Studio 2022\Projects\mp3scraper\mp3scraper\bin\Debug\test-files\mp3scraper-test-relative.html
+C:\Users\gary\Documents\Visual Studio 2022\Projects\mp3scraper\mp3scraper\bin\Debug\test-files\mp3scraper-test-typical.html
+C:\Users\gary\Documents\Visual Studio 2022\Projects\mp3scraper\mp3scraper\bin\Debug\mp3scraper.docx
+C:\Users\gary\Documents\Visual Studio 2022\Projects\mp3scraper\mp3scraper\bin\Debug\mp3scraper.pdf
+C:\Users\gary\Documents\Visual Studio 2022\Projects\mp3scraper\mp3scraper\bin\Debug\mp3scraper.exe.config
+C:\Users\gary\Documents\Visual Studio 2022\Projects\mp3scraper\mp3scraper\bin\Debug\mp3scraper.exe
+C:\Users\gary\Documents\Visual Studio 2022\Projects\mp3scraper\mp3scraper\bin\Debug\mp3scraper.pdb
+C:\Users\gary\Documents\Visual Studio 2022\Projects\mp3scraper\mp3scraper\bin\Debug\mp3scrApi.dll
+C:\Users\gary\Documents\Visual Studio 2022\Projects\mp3scraper\mp3scraper\bin\Debug\mp3scrApi.pdb
+C:\Users\gary\Documents\Visual Studio 2022\Projects\mp3scraper\mp3scraper\obj\Debug\mp3scraper.csproj.AssemblyReference.cache
+C:\Users\gary\Documents\Visual Studio 2022\Projects\mp3scraper\mp3scraper\obj\Debug\mp3scraper.csproj.SuggestedBindingRedirects.cache
+C:\Users\gary\Documents\Visual Studio 2022\Projects\mp3scraper\mp3scraper\obj\Debug\mp3scraper.csproj.CoreCompileInputs.cache
+C:\Users\gary\Documents\Visual Studio 2022\Projects\mp3scraper\mp3scraper\obj\Debug\mp3scraper.csproj.CopyComplete
+C:\Users\gary\Documents\Visual Studio 2022\Projects\mp3scraper\mp3scraper\obj\Debug\mp3scraper.exe
+C:\Users\gary\Documents\Visual Studio 2022\Projects\mp3scraper\mp3scraper\obj\Debug\mp3scraper.pdb
+C:\Users\gary\Documents\Visual Studio 2022\Projects\mp3scraper\mp3scraper\bin\Debug\mp3scraper-readme-2022-05-06-0.txt
+C:\Users\gary\source\repos\mp3scraper\mp3scraper\bin\Debug\license.txt
+C:\Users\gary\source\repos\mp3scraper\mp3scraper\bin\Debug\release-notes.txt
+C:\Users\gary\source\repos\mp3scraper\mp3scraper\bin\Debug\test-files\mp3scraper-test-filtered.html
+C:\Users\gary\source\repos\mp3scraper\mp3scraper\bin\Debug\test-files\mp3scraper-test-relative.html
+C:\Users\gary\source\repos\mp3scraper\mp3scraper\bin\Debug\test-files\mp3scraper-test-typical.html
+C:\Users\gary\source\repos\mp3scraper\mp3scraper\bin\Debug\mp3scraper.docx
+C:\Users\gary\source\repos\mp3scraper\mp3scraper\bin\Debug\mp3scraper.pdf
+C:\Users\gary\source\repos\mp3scraper\mp3scraper\bin\Debug\mp3scraper.exe.config
+C:\Users\gary\source\repos\mp3scraper\mp3scraper\bin\Debug\mp3scraper.exe
+C:\Users\gary\source\repos\mp3scraper\mp3scraper\bin\Debug\mp3scraper.pdb
+C:\Users\gary\source\repos\mp3scraper\mp3scraper\bin\Debug\mp3scrApi.dll
+C:\Users\gary\source\repos\mp3scraper\mp3scraper\bin\Debug\mp3scrApi.pdb
+C:\Users\gary\source\repos\mp3scraper\mp3scraper\obj\Debug\mp3scraper.csproj.AssemblyReference.cache
+C:\Users\gary\source\repos\mp3scraper\mp3scraper\obj\Debug\mp3scraper.csproj.CoreCompileInputs.cache
+C:\Users\gary\source\repos\mp3scraper\mp3scraper\obj\Debug\mp3scraper.csproj.CopyComplete
+C:\Users\gary\source\repos\mp3scraper\mp3scraper\obj\Debug\mp3scraper.exe
+C:\Users\gary\source\repos\mp3scraper\mp3scraper\obj\Debug\mp3scraper.pdb
+C:\Users\gary\source\repos\mp3scraper\mp3scraper\bin\Debug\mp3scraper-readme-2024-01-20-0.txt
